@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Camino Hacia la Libertad Financiera | Programa para Mujeres</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#FAF5F2',
+                            100: '#F4ECE7',
+                            200: '#E7D5CB',
+                            300: '#D7B7A5',
+                            400: '#C5937A',
+                            500: '#B87B5E',
+                            600: '#9E5F44',
+                            700: '#7E4733',
+                            800: '#603525',
+                            900: '#432317',
+                        },
+                        navy: {
+                            800: '#1E293B',
+                            900: '#0F172A',
+                            950: '#090D16',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #B87B5E 0%, #D7B7A5 50%, #9E5F44 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at top right, rgba(231, 213, 203, 0.35) 0%, rgba(250, 245, 242, 1) 60%);
+        }
+    </style>
+</head>
+<body class="bg-brand-50 text-slate-800 font-sans antialiased selection:bg-brand-200 selection:text-brand-900">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-900 text-brand-100 text-xs sm:text-sm py-2 px-4 text-center font-medium flex items-center justify-center gap-2 shadow-inner">
+        <span class="bg-brand-500 text-white text-xs px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Edición 2026</span>
+        <span>Programa Completo + <strong>Bootcamps & Mentoría Personal 1-a-1</strong></span>
+        <span class="hidden md:inline text-brand-300">• Acceso inmediato e ilimitado</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-brand-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center font-serif text-xl font-bold shadow-md shadow-brand-500/20">
+                    F
+                </div>
+                <div>
+                    <span class="font-serif text-lg font-bold text-slate-900 tracking-tight block leading-none">Finanzas con Propósito</span>
+                    <span class="text-[10px] text-brand-600 font-semibold tracking-wider uppercase">Para Mujeres de Hoy</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#beneficios" class="hover:text-brand-600 transition">¿Por qué este curso?</a>
+                <a href="#temario" class="hover:text-brand-600 transition">Temario (15 Caps)</a>
+                <a href="#testimonios" class="hover:text-brand-600 transition">Historias Reales</a>
+            </nav>
+
+            <button onclick="openCheckoutModal()" class="hidden sm:inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-lg shadow-brand-500/25 transition-all transform hover:-translate-y-0.5 cursor-pointer">
+                <span>Quiero mi Libertad</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden relative border-b border-brand-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <div class="inline-flex items-center gap-2 bg-brand-100 text-brand-800 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-6 border border-brand-200">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-600"></i>
+                <span>Programa Práctico + Bootcamps + Mentoría Personal 1-a-1</span>
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight mb-6">
+                Construye la vida que mereces, <span class="gradient-text italic font-normal">con acompañamiento personalizado</span>.
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+                Pasa de simplemente administrar gastos a diseñar un patrimonio sólido. Incluye <strong>Bootcamps prácticos en vivo, Mentoría Personalizada y Reuniones One-on-One</strong> para guiar cada paso de tu transformación financiera.
+            </p>
+
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+                <button onclick="openCheckoutModal()" class="w-full sm:w-auto bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-4 rounded-2xl shadow-xl shadow-brand-500/30 text-center text-lg transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 cursor-pointer">
+                    <span>Comenzar mi Transformación</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+                <a href="#temario" class="w-full sm:w-auto bg-white hover:bg-brand-50 text-slate-700 font-semibold px-6 py-4 rounded-2xl border border-brand-200 text-center text-base transition flex items-center justify-center gap-2">
+                    <i data-lucide="book-open" class="w-4 h-4 text-brand-500"></i>
+                    <span>Explorar Temario</span>
+                </a>
+            </div>
+
+            <!-- Hero VIP Highlights Cards -->
+            <div class="grid sm:grid-cols-3 gap-3 text-left mb-8 max-w-3xl mx-auto">
+                <div class="p-3.5 bg-white/80 rounded-2xl border border-brand-200 shadow-sm flex items-start gap-3">
+                    <div class="p-2 bg-brand-100 rounded-xl text-brand-700 shrink-0">
+                        <i data-lucide="zap" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-xs">Bootcamps Intensivos</h4>
+                        <p class="text-[11px] text-slate-500 leading-snug">Talleres prácticos de ejecución rápida.</p>
+                    </div>
+                </div>
+
+                <div class="p-3.5 bg-white/80 rounded-2xl border border-brand-200 shadow-sm flex items-start gap-3">
+                    <div class="p-2 bg-brand-100 rounded-xl text-brand-700 shrink-0">
+                        <i data-lucide="user-check" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-xs">Mentoría Personal</h4>
+                        <p class="text-[11px] text-slate-500 leading-snug">Guía directa para tus metas financieras.</p>
+                    </div>
+                </div>
+
+                <div class="p-3.5 bg-white/80 rounded-2xl border border-brand-200 shadow-sm flex items-start gap-3">
+                    <div class="p-2 bg-brand-100 rounded-xl text-brand-700 shrink-0">
+                        <i data-lucide="messages-square" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-xs">Reuniones One-on-One</h4>
+                        <p class="text-[11px] text-slate-500 leading-snug">Sesiones privadas 1 a 1 dedicadas a ti.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Proof Stats -->
+            <div class="pt-6 border-t border-brand-200/60 grid grid-cols-3 gap-4 text-center max-w-2xl mx-auto">
+                <div>
+                    <p class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">15</p>
+                    <p class="text-xs text-slate-500 font-medium">Módulos Guiados</p>
+                </div>
+                <div>
+                    <p class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">10 Años</p>
+                    <p class="text-xs text-slate-500 font-medium">Hoja de Ruta Clara</p>
+                </div>
+                <div>
+                    <p class="font-serif text-2xl sm:text-3xl font-bold text-slate-900">+3,800</p>
+                    <p class="text-xs text-slate-500 font-medium">Mujeres Empoderadas</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Empathy / Pain Points Section -->
+    <section id="beneficios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">¿Sientes que esto te describe?</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 leading-tight">
+                    Llegar a los 30+ trae madurez, metas claras... y una responsabilidad financiera real.
+                </h2>
+                <p class="mt-4 text-slate-600 text-base sm:text-lg">
+                    La mayoría de las mujeres trabajadoras, profesionales o madres se enfrentan a los mismos retos silenciosos en relación con el dinero.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-3xl bg-brand-50/50 border border-brand-100 hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center mb-6">
+                        <i data-lucide="clock" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Trabajas duro, pero el dinero "se esfuma"</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Generas ingresos mes a mes, pero al final del período sientes que no queda un margen claro para tus verdaderos sueños o para ti misma.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-8 rounded-3xl bg-brand-50/50 border border-brand-100 hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mb-6">
+                        <i data-lucide="trending-down" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Las deudas quitan tu paz mental</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Tarjetas de crédito o compromisos acumulados que parecen un laberinto sin fin. Quieres un plan definitivo para salir de ellas con estrategia.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-8 rounded-3xl bg-brand-50/50 border border-brand-100 hover:shadow-xl transition-all duration-300">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-200 text-brand-800 flex items-center justify-center mb-6">
+                        <i data-lucide="help-circle" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">¿Miedo a invertir o no saber por dónde empezar?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Sabes que guardar dinero en el banco no es suficiente contra la inflación, pero la información técnica de inversiones te resulta abrumadora.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Transition Quote -->
+            <div class="mt-16 bg-brand-900 text-white rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl">
+                <div class="max-w-3xl mx-auto relative z-10">
+                    <p class="font-serif text-xl sm:text-2xl italic text-brand-200 mb-4">
+                        "La libertad financiera no se trata de tener millones en una cuenta overnight, sino de tener la libertad de elegir cómo usas tu tiempo y construir opciones reales."
+                    </p>
+                    <p class="text-xs uppercase tracking-widest text-brand-300 font-semibold">— Principio Central del Programa (Edición 2026)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Syllabus / Chapter Breakdown -->
+    <section id="temario" class="py-20 bg-brand-50/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">Programa Estructurado</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Un mapa completo de 15 Capítulos + Cuaderno de Trabajo</h2>
+                <p class="mt-3 text-slate-600 text-base">
+                    Diseñado para leerse y aplicarse paso a paso. Cada capítulo termina en una decisión o acción concreta.
+                </p>
+            </div>
+
+            <div class="space-y-4" id="curriculum-accordion">
+                <!-- Module 1 -->
+                <div class="bg-white rounded-2xl border border-brand-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion('acc-1')" class="w-full p-6 text-left font-bold text-slate-900 text-base sm:text-lg flex items-center justify-between hover:bg-brand-50/50 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 text-xs font-bold flex items-center justify-center">01</span>
+                            <span>Módulo 1: Mentalidad, Radiografía & Metas Claras (Capítulos 1 - 3)</span>
+                        </div>
+                        <i data-lucide="chevron-down" id="acc-1-icon" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="acc-1" class="hidden p-6 pt-0 border-t border-slate-100 text-sm text-slate-600 space-y-3 bg-brand-50/20">
+                        <p>• <strong>Cap. 1: Mentalidad Financiera:</strong> Diferenciar ingreso, patrimonio y libertad. Reglas personales para evitar decisiones impulsivas.</p>
+                        <p>• <strong>Cap. 2: Metas que se convierten en números:</strong> Convertir intenciones en cifras reales. El patrimonio neto como brújula.</p>
+                        <p>• <strong>Cap. 3: Radiografía de tus Finanzas:</strong> Detectar fugas de dinero, calcular tu flujo de efectivo mensual y crear tu tablero financiero personal.</p>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="bg-white rounded-2xl border border-brand-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion('acc-2')" class="w-full p-6 text-left font-bold text-slate-900 text-base sm:text-lg flex items-center justify-between hover:bg-brand-50/50 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 text-xs font-bold flex items-center justify-center">02</span>
+                            <span>Módulo 2: Presupuesto Sin Privaciones & Plan Salida de Deudas (Capítulos 4 - 5)</span>
+                        </div>
+                        <i data-lucide="chevron-down" id="acc-2-icon" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="acc-2" class="hidden p-6 pt-0 border-t border-slate-100 text-sm text-slate-600 space-y-3 bg-brand-50/20">
+                        <p>• <strong>Cap. 4: Presupuesto y Control de Flujo:</strong> El método 50/30/20 adaptado, presupuesto base cero y cómo recortar sin vivir en austeridad extrema.</p>
+                        <p>• <strong>Cap. 5: Deudas: Salir del ciclo y recuperar margen:</strong> Método Avalancha vs. Bola de Nieve, negociación de tasas y estrategia segura con tarjetas de crédito.</p>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="bg-white rounded-2xl border border-brand-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion('acc-3')" class="w-full p-6 text-left font-bold text-slate-900 text-base sm:text-lg flex items-center justify-between hover:bg-brand-50/50 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 text-xs font-bold flex items-center justify-center">03</span>
+                            <span>Módulo 3: Aumentar Ingresos, Negocios & Activos (Capítulos 6 - 7)</span>
+                        </div>
+                        <i data-lucide="chevron-down" id="acc-3-icon" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="acc-3" class="hidden p-6 pt-0 border-t border-slate-100 text-sm text-slate-600 space-y-3 bg-brand-50/20">
+                        <p>• <strong>Cap. 6: Aumentar Ingresos:</strong> Desarrollar habilidades de alto valor, negociar en tu empleo actual o diversificar con servicios independientes.</p>
+                        <p>• <strong>Cap. 7: Negocios y Activos Productivos:</strong> Cómo validar proyectos antes de gastar, entender márgenes y crear fuentes adicionales de flujo.</p>
+                    </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="bg-white rounded-2xl border border-brand-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion('acc-4')" class="w-full p-6 text-left font-bold text-slate-900 text-base sm:text-lg flex items-center justify-between hover:bg-brand-50/50 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 text-xs font-bold flex items-center justify-center">04</span>
+                            <span>Módulo 4: Fondo de Emergencia, Inversión & Protección (Capítulos 8 - 10)</span>
+                        </div>
+                        <i data-lucide="chevron-down" id="acc-4-icon" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="acc-4" class="hidden p-6 pt-0 border-t border-slate-100 text-sm text-slate-600 space-y-3 bg-brand-50/20">
+                        <p>• <strong>Cap. 8: Ahorro, Liquidez y Fondo de Emergencia:</strong> Cuántos meses realmente necesitas y dónde guardarlo sin perder contra la inflación.</p>
+                        <p>• <strong>Cap. 9: Inversión y Crecimiento del Patrimonio:</strong> Introducción sin enredos a fondos, acciones, bienes raíces e interés compuesto.</p>
+                        <p>• <strong>Cap. 10: Protección, Impuestos y Continuidad:</strong> Blindar tu patrimonio ante imprevistos para no tener que vender tus activos en momentos difíciles.</p>
+                    </div>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="bg-white rounded-2xl border border-brand-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion('acc-5')" class="w-full p-6 text-left font-bold text-slate-900 text-base sm:text-lg flex items-center justify-between hover:bg-brand-50/50 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-700 text-xs font-bold flex items-center justify-center">05</span>
+                            <span>Módulo 5: Hábitos, Hoja de Ruta a 10 Años & Cuaderno de Trabajo (Capítulos 11 - 15)</span>
+                        </div>
+                        <i data-lucide="chevron-down" id="acc-5-icon" class="w-5 h-5 text-slate-400 transition-transform"></i>
+                    </button>
+                    <div id="acc-5" class="hidden p-6 pt-0 border-t border-slate-100 text-sm text-slate-600 space-y-3 bg-brand-50/20">
+                        <p>• <strong>Cap. 11 a 13: Psicología del Dinero y Ruta a 10 Años:</strong> Diseño de hábitos sostenibles y planificación estratégica de una década.</p>
+                        <p>• <strong>Cap. 14 & 15: Sistema de Ejecución:</strong> Convertir el conocimiento en decisiones semanales observables.</p>
+                        <p>• <strong>Cuaderno de Trabajo Final (Págs 146-150):</strong> Plantillas imprimibles y editables para rellenar tus propios números.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included / Value Stack -->
+    <section class="py-20 bg-white border-b border-brand-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">Todo lo que Recibes Hoy</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Tu kit completo para la tranquilidad financiera</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-3xl bg-brand-50/60 border border-brand-100 relative">
+                    <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center font-bold mb-4">1</div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Guía Ebook Digital (150 Págs)</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Acceso vitalicio a la versión completa 2026 en PDF imprimible e interactivo para consultar cuando quieras.</p>
+                </div>
+
+                <div class="p-6 rounded-3xl bg-brand-50/60 border border-brand-100 relative">
+                    <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center font-bold mb-4">2</div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Cuaderno de Trabajo Práctico</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Hojas de cálculo y ejercicios en blanco para anotar tus metas, gastos, diagnósticos y plan de pago de deudas.</p>
+                </div>
+
+                <div class="p-6 rounded-3xl bg-brand-50/60 border border-brand-100 relative">
+                    <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center font-bold mb-4">3</div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Plantilla Tablero Financiero</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Formato listo en Excel / Google Sheets para automatizar el seguimiento de tu presupuesto mensual y patrimonio neto.</p>
+                </div>
+
+                <div class="p-6 rounded-3xl bg-brand-50/60 border border-brand-100 relative">
+                    <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center font-bold mb-4">4</div>
+                    <h3 class="font-bold text-slate-900 text-lg mb-2">Hoja de Ruta de 10 Años</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Un framework de planificación de largo plazo para proyectar tu retiro, compras mayores o independencia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonios" class="py-20 bg-brand-50/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">Historias de Transformación</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">Mujeres como tú que ya tomaron el timón</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl border border-brand-100 shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic mb-6 leading-relaxed">
+                            "A mis 34 años ganaba bien pero sentía que el dinero se diluía. El capítulo de 'Radiografía de Finanzas' me abrió los ojos a fugas que ni notaba. En 6 meses eliminé mi tarjeta de crédito y armé mi primer fondo."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-brand-200 text-brand-800 font-bold flex items-center justify-center text-sm">CV</div>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Carolina V.</p>
+                            <p class="text-xs text-slate-500">34 años • Arquitecta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-brand-100 shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic mb-6 leading-relaxed">
+                            "Lo que más valoro es que no está escrito en lenguaje aburrido o machista de finanzas. Es empático, práctico y muy claro. Por primera vez siento que tengo el control de mi retiro."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-brand-200 text-brand-800 font-bold flex items-center justify-center text-sm">MG</div>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Maria Elena G.</p>
+                            <p class="text-xs text-slate-500">42 años • Docente & Mamá</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-brand-100 shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic mb-6 leading-relaxed">
+                            "Pensaba que para invertir necesitaba miles de dólares. El capítulo 9 me enseñó que podía empezar de forma súper accesible y con cero enredos. Vale cada centavo."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-brand-200 text-brand-800 font-bold flex items-center justify-center text-sm">SP</div>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Sofia P.</p>
+                            <p class="text-xs text-slate-500">38 años • Emprendedora</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="precios" class="py-20 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            
+            <div class="mb-10 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-brand-100 via-brand-50 to-brand-100 border border-brand-300 text-center shadow-lg relative overflow-hidden">
+                <div class="inline-flex items-center gap-2 bg-brand-500 text-white text-xs px-3.5 py-1 rounded-full font-bold uppercase tracking-wider mb-3">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                    <span>Evolución Acompañada</span>
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+                    Medimos tu avance para asegurar tus resultados
+                </h3>
+                <p class="text-slate-700 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-medium">
+                    Después de un mes con nosotros mediremos tu progreso y podrás acceder a mentorías exclusivas y bootcamps prácticos para acelerar tu crecimiento financiero.
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-b from-brand-900 to-navy-950 text-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-brand-500/30 text-center relative overflow-hidden">
+                <div class="inline-flex items-center gap-2 bg-brand-500/20 text-brand-300 border border-brand-500/40 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-8">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-brand-400"></i>
+                    <span>Inscripciones Abiertas • Cupos Limitados</span>
+                </div>
+
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold mb-4">Invierte en la habilidad más rentable de tu vida</h2>
+                <p class="text-brand-200 text-sm sm:text-base max-w-xl mx-auto mb-8">
+                    Acceso inmediato a todo el programa, libro digital de 150 páginas, cuaderno de trabajo, bootcamps y la red de inversión de alto nivel.
+                </p>
+
+                <div class="bg-slate-900/80 rounded-2xl p-6 max-w-md mx-auto mb-8 border border-slate-800">
+                    <div class="font-serif text-4xl sm:text-5xl font-bold text-white mb-2">
+                        $20,000 <span class="text-sm font-sans font-normal text-slate-400">MXN (Pago Único)</span>
+                    </div>
+                    <p class="text-xs text-brand-300">Sin suscripciones recurrentes. Acceso de por vida con actualizaciones gratis.</p>
+                </div>
+
+                <div class="text-left max-w-md mx-auto space-y-3.5 mb-8 text-sm text-slate-300">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <span>Programa completo en PDF (15 capítulos)</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <span>Cuaderno de Trabajo Imprimible & Editable</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <span>Plantilla Excel: Tablero Financiero Personal</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <span class="text-white font-medium">Acceso a Bootcamp intensivo y mentorías</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <span class="text-white font-medium">Reuniones One-on-One personalizadas</span>
+                    </div>
+                </div>
+
+                <button onclick="openCheckoutModal()" class="w-full max-w-md bg-brand-500 hover:bg-brand-600 text-white font-extrabold py-5 px-8 rounded-2xl shadow-xl shadow-brand-500/40 text-lg transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 mx-auto cursor-pointer">
+                    <span>Comprar Ahora por $20,000 MXN</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </button>
+
+                <div class="flex items-center justify-center gap-6 mt-6 text-xs text-slate-400">
+                    <span class="flex items-center gap-1.5"><i data-lucide="lock" class="w-3.5 h-3.5"></i> Pago SSL Seguro</span>
+                    <span class="flex items-center gap-1.5"><i data-lucide="shield" class="w-3.5 h-3.5"></i> Garantía 7 Días</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-brand-50/60 border-t border-brand-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest block mb-2">Preguntas Frecuentes</span>
+                <h2 class="font-serif text-3xl font-bold text-slate-900">¿Tienes dudas antes de empezar?</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-2xl border border-brand-100 shadow-sm">
+                    <h3 class="font-bold text-slate-900 mb-2 text-base">¿Necesito conocimientos previos en matemáticas o finanzas?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">No. El libro y las guías están explicados en un lenguaje 100% cotidiano, amigable y práctico. Sin jerga compleja ni fórmulas difíciles.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-brand-100 shadow-sm">
+                    <h3 class="font-bold text-slate-900 mb-2 text-base">¿En qué formato recibiré el material?</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Todo el material es digital. Inmediatamente tras tu compra recibes un enlace de descarga en tu correo electrónico con la guía PDF (150 páginas) y las plantillas en Excel y PDF editable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-7 h-7 rounded-lg bg-brand-500 text-white flex items-center justify-center font-serif text-sm font-bold">F</div>
+                    <span class="font-serif text-sm font-bold text-white">El Camino Hacia la Libertad Financiera</span>
+                </div>
+                <p class="text-slate-500">© 2026 Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal con validación "Hacen falta datos" -->
+    <div id="checkout-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-brand-100">
+            <button onclick="closeCheckoutModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-2 cursor-pointer">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center mx-auto mb-3">
+                    <i data-lucide="user-plus" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-slate-900">Datos para tus Accesos</h3>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                    Ingresa tu correo y nombre completo para enviarte la guía digital y generar tus credenciales de acceso a nuestro sitio web exclusivo, donde podrás acceder a los contenidos, reuniones de Zoom y conectarte con personas más avanzadas en el curso.
+                </p>
+            </div>
+
+            <!-- Alerta si faltan datos -->
+            <div id="error-banner" class="hidden mb-4 p-3 rounded-xl bg-rose-100 border border-rose-300 text-rose-800 text-xs font-bold text-center">
+                Hacen falta datos
+            </div>
+
+            <form onsubmit="handleCheckout(event)" class="space-y-4" novalidate>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Nombre Completo *</label>
+                    <input type="text" id="buyer-name" placeholder="Ej. María García" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Correo Electrónico *</label>
+                    <input type="email" id="buyer-email" placeholder="maria@ejemplo.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm">
+                </div>
+
+                <button type="submit" id="submit-btn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl shadow-lg transition text-base cursor-pointer">
+                    <span id="submit-btn-text">Comprar ahora</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Embedded Interactivity Scripts -->
+    <script>
+        lucide.createIcons();
+
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                if (icon) icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        function openCheckoutModal() {
+            document.getElementById('error-banner').classList.add('hidden');
+            document.getElementById('checkout-modal').classList.remove('hidden');
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkout-modal').classList.add('hidden');
+        }
+
+        async function handleCheckout(e) {
+            e.preventDefault();
+
+            const nameInput = document.getElementById('buyer-name').value.trim();
+            const emailInput = document.getElementById('buyer-email').value.trim();
+            const errorBanner = document.getElementById('error-banner');
+            const submitBtn = document.getElementById('submit-btn');
+            const submitBtnText = document.getElementById('submit-btn-text');
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!nameInput || !emailInput || !emailRegex.test(emailInput)) {
+                errorBanner.classList.remove('hidden');
+                return;
+            } else {
+                errorBanner.classList.add('hidden');
+            }
+
+            submitBtn.disabled = true;
+            submitBtnText.textContent = "Conectando con Mercado Pago...";
+
+            try {
+                const response = await fetch('/api/create-preference', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        title: "Programa Completo: El Camino Hacia la Libertad Financiera",
+                        unit_price: 20000,
+                        quantity: 1,
+                        currency_id: "MXN",
+                        payer: { name: nameInput, email: emailInput }
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.init_point) {
+                    window.location.href = data.init_point;
+                } else {
+                    throw new Error(data.error || "No se pudo generar la preferencia de pago.");
+                }
+            } catch (error) {
+                console.error("Error al procesar la compra:", error);
+                alert("Hubo un problema al conectar con Mercado Pago.");
+                submitBtn.disabled = false;
+                submitBtnText.textContent = "Comprar ahora";
+            }
+        }
+    </script>
+</body>
+</html>
