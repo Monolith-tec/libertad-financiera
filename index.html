@@ -659,5 +659,43 @@
             }
         }
     </script>
+    <!-- Modal de Agradecimiento por Compra -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
+
+    if (status === 'approved') {
+      // Crear contenedor del modal
+      const thankYouModal = document.createElement('div');
+      thankYouModal.className = 'fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4';
+      thankYouModal.id = 'thankYouModal';
+
+      thankYouModal.innerHTML = `
+        <div class="bg-stone-900 border border-stone-800 text-stone-100 max-w-md w-full p-6 rounded-2xl shadow-2xl text-center space-y-4">
+          <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto text-3xl font-bold">
+            ✓
+          </div>
+          <h3 class="text-2xl font-serif font-bold text-amber-200">¡Pago Confirmado!</h3>
+          <p class="text-stone-300 text-sm leading-relaxed">
+            Tu acceso al programa <strong class="text-white">Libertad Financiera</strong> ha sido procesado con éxito. Revisa tu correo electrónico para encontrar los detalles de inicio y tus materiales.
+          </p>
+          <button id="closeThankYou" class="w-full py-3 bg-amber-600 hover:bg-amber-500 text-stone-950 font-bold rounded-xl transition duration-200">
+            Comenzar mi Transformación
+          </button>
+        </div>
+      `;
+
+      document.body.appendChild(thankYouModal);
+
+      // Evento para cerrar el modal y limpiar la URL
+      document.getElementById('closeThankYou').addEventListener('click', () => {
+        thankYouModal.remove();
+        // Limpiar los parámetros de la URL sin recargar la página
+        window.history.replaceState({}, document.title, window.location.pathname);
+      });
+    }
+  });
+</script>
 </body>
 </html>
